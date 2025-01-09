@@ -2,49 +2,134 @@
 <html>
   <head>
     <style>
+      a {
+          color: white;
+          text-decoration: none;
+          @media (width < 1000px) {
+              font-size: 3vw;
+          }
+          @media (width > 1001px) {
+              font-size: 14pt;
+          }
+      }
+      p {
+          @media (width < 1000px) {
+              font-size: 3vw;
+          }
+          @media (width > 1001px) {
+              font-size: 14pt;
+          }
+      }
       body {
           background: black;
           color: white;
       }
+      .constellation {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          positon: absolute;
+          top: 0;
+          left: 0;
+          min-height: 100vh;
+          background: black;
+      }
+      #ursa-minor {
+          width: auto;
+          height: 60vh;
+      }
+
+      #link-map > a {
+          position: absolute;
+          cursor: pointer;
+          font-size: 1.5vh;
+          white-space: nowrap;
+      }
+      #link-map > .home {
+          top: 6.5vh;
+          left: 5.7vh;
+      }
+      #link-map > .leaders {
+          top: 17vh;
+          left: 0.2vh;
+      }
+      #link-map > .socials {
+          top: 30vh;
+          left: -1.5vh;
+      }
+      #link-map > .platform {
+          top: 43vh;
+          left: 7vh;
+      }
+      #link-map > .calendar {
+          top: 49vh;
+          left: -2.5vh;
+      }
+      #link-map > .video {
+          top: 53vh;
+          left: 13vh;
+      }
+      #link-map > .photos {
+          top: 60vh;
+          left: 8vh;
+      }
       .footer {
           display: flex;
-          position: absolute;
-          left: 0;
-          bottom: 0;
+          margin-top: auto;
           width: 100%;
           background: black;
           height: 5%;
           justify-content: space-around;
           padding-top: 1%;
       }
-
       .footer > a {
-          color: white;
       }
-
       .header {
           display: flex;
           justify-content: space-around;
           background: #03153C;
           height: 20;
           width: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
+          /* position: absolute; */
+          /* left: 0; */
           color: white;
-          margin-bottom: 0;
-          padding-bottom: 0;
+          /* margin-bottom: 1%; */
+          padding-bottom: 3%;
+          padding-top: 3%;
       }
-      .header-margin {
-          margin-bottom: 10%;
+      #main {
+          /* display: flex; */
+          /* justify-content: center; */
+          /* flex-direction: column; */
+          /* align-items: center; */
+          /* positon: absolute; */
+          display: flex;
+          flex-direction: column;
+          top: 0;
+          left: 0;
+          min-height: 100vh;
+          background: black;
       }
     </style>
   </head>
   <body>
+    <section class="constellation">
+      <div id="link-map" style="position:relative">
+        <img src="assets/ursa-minor.png" id="ursa-minor"/>
+        <a class="socials" href="./socials.html">Our Socials</a>
+        <a class="home" onClick="scroll_main()">Home</a>
+        <a class="leaders" href="./party-leaders.html">Our Leaders</a>
+        <a class="platform" href="./party-platform.html">Our Platform</a>
+        <a class="calendar" href="./calendar.html">Upcoming Events</a>
+        <a class="video" href="./video.html">Campaign Videos</a>
+        <a class="photos" href="./photos.html">Campaign Photos</a>
+      </div>
+    </section>
+    <div id="main">
     <div class="header">
-      <img src="assets/polaris.png" width="500" height="281"/>
+      <img src="assets/polaris.png" width="400" height="auto"/>
     </div>
-    <div class="header-margin"></div>
     <div>
       <p>
         This is some filler text so we can see things
@@ -55,5 +140,17 @@
       <a href="./socials.html">Socials</a>
       <a href="./party-platform.html">Platform</a>
     </div>
+    </div>
+    <script>
+      function scroll_main() {
+          const main = document.getElementById("main")
+          const rect = main.getBoundingClientRect();
+          window.scroll({
+              top: rect.y,
+              left: 0,
+              behavior: "smooth"
+          });
+      }
+    </script>
   </body>
 </html>

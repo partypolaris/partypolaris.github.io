@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          background: black;
+          color: white;
+      }
+      a {
+          color: white;
+          text-decoration: none;
+          @media (width < 1000px) {
+              font-size: 3vw;
+          }
+          @media (width > 1001px) {
+              font-size: 14pt;
+          }
+      }
+      p {
+          @media (width < 1000px) {
+              font-size: 3vw;
+          }
+          @media (width > 1001px) {
+              font-size: 14pt;
+          }
+      }
+      .construction {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          min-height: 100vh;
+          width: 100%;
+      }
+      .footer {
+          display: flex;
+          margin-top: auto;
+          width: 100%;
+          background: black;
+          height: 5%;
+          justify-content: space-around;
+          padding-top: 1%;
+          padding-bottom: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="construction">
+      <h1 style="position:relative;">Under Construction</h1>
+      <p style="position:relative;">
+        Sorry, were still building that page
+      </p>
+      <!-- <img style="position:relative;" src="assets/under-construction.gif"/> -->
+      <div class="footer">
+        <a href="./index.html">Home</a>
+        <a href="./party-leaders.html">Party Leaders</a>
+        <a href="./socials.html">Socials</a>
+        <a href="./party-platform.html">Platform</a>
+      </div>
+    </section>
+  </body>
+</html>
