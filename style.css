@@ -20,6 +20,9 @@ body {
     background: black;
     color: white;
 }
+
+
+
 .constellation {
     display: flex;
     justify-content: center;
@@ -31,6 +34,8 @@ body {
     min-height: 100vh;
     background: black;
 }
+
+
 #ursa-minor {
     width: auto;
     height: 60vh;
@@ -81,19 +86,42 @@ body {
 }
 .footer > a {
 }
+
 .header {
     display: flex;
     justify-content: space-around;
     background: #03153C;
     height: 20;
     width: 100%;
-    /* position: absolute; */
-    /* left: 0; */
+    color: white;
+    margin-bottom: 1%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+.home-header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    background: #03153C;
+    height: 20;
+    width: 100%;
     color: white;
     /* margin-bottom: 1%; */
     padding-bottom: 3%;
     padding-top: 3%;
 }
+
+.home-header > img {
+    @media (width < 1000px) {
+        height: 10vh;
+    }
+    @media (width > 1001px) {
+        height: 6vh;
+    }
+    width: auto;
+}
+
 #main {
     /* display: flex; */
     /* justify-content: center; */
