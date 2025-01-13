@@ -4,18 +4,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section class="constellation">
-      <div id="link-map" style="position:relative">
-        <img src="assets/ursa-minor.png" id="ursa-minor"/>
-        <a class="socials" href="./socials.html">Social Media</a>
-        <a class="home" onClick="scroll_main()">Home</a>
-        <a class="leaders" href="./party-leaders.html">Party Leaders</a>
-        <a class="platform" href="./party-platform.html">Platform</a>
-        <a class="calendar" href="./calendar.html">Calendar</a>
-        <a class="video" href="./video.html">Photos/Videos</a>
-        <a class="photos" href="./other-party-buttons.html">Other Parties</a>
-      </div>
-    </section>
     <div id="main">
     <div class="header">
       <img src="assets/polaris.png" width="400" height="auto"/>
@@ -30,16 +18,5 @@
       <a href="./party-platform.html">Platform</a>
     </div>
     </div>
-    <script>
-      function scroll_main() {
-          const main = document.getElementById("main")
-          const rect = main.getBoundingClientRect();
-          window.scroll({
-              top: rect.y,
-              left: 0,
-              behavior: "smooth"
-          });
-      }
-    </script>
   </body>
 </html>
