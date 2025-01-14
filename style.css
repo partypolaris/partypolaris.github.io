@@ -99,12 +99,13 @@ body {
     padding-top: 3%;
 }
 .home-header {
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: space-around;
     background: #03153C;
-    height: 20;
+    /* height: 5vh; */
     width: 100%;
     color: white;
     /* margin-bottom: 1%; */

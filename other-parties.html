@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="template-style.css">
   </head>
   </head>
-  <body>
+  <script>
+    function constructionRedirect() {
+        location.replace("./under-construction.html");
+    }
+  </script>
+  <body onload="constructionRedirect()">
     <header>
         <div class="stars-container" id="stars-container"></div>
         <div id="logo-div" class="logo">

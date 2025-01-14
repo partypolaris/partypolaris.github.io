@@ -2,8 +2,15 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <style>
+    </style>
   </head>
   <body>
+    <div id="stars-container" style="width: 100%;"></div>
+    <div class="home-header" id="home-header">
+      <img id="logo" src="assets/polaris.png" height="auto"/>
+    </div>
     <section class="constellation">
       <div id="link-map" style="position:relative">
         <img src="assets/ursa-minor.png" id="ursa-minor"/>
@@ -13,24 +20,24 @@
         <a class="platform" href="./party-platform.html">Platform</a>
         <a class="calendar" href="./calendar.html">Calendar</a>
         <a class="video" href="./video.html">Photos/Videos</a>
-        <a class="photos" href="./other-party-buttons.html">Other Parties</a>
+        <a class="photos" href="./other-parties.html">Other Parties</a>
       </div>
     </section>
     <div id="main">
-    <div class="home-header">
-      <img src="assets/polaris.png" width="400" height="auto"/>
-    </div>
-    <div>
-      <p>
-      </p>
-    </div>
+    <main>
+    </main>
     <div class="footer">
       <a href="./party-leaders.html">Party Leaders</a>
       <a href="./socials.html">Socials</a>
       <a href="./party-platform.html">Platform</a>
     </div>
     </div>
+    <script src="./stars.js"></script>
     <script>
+      function gens() {
+          generateStars("home-header", "logo");
+      }
+      window.addEventListener('load', gens);
       function scroll_main() {
           const main = document.getElementById("main")
           const rect = main.getBoundingClientRect();
