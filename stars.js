@@ -31,11 +31,14 @@ function xPercent(xPos, exclusion) {
 }
 
 
-function generateStars(starsContainerID, overlayElementID, exclusionElementID) {
+function generateStars(starsContainerID, overlayElementID, exclusionElementID, numStars) {
     const header = document.getElementById(overlayElementID);
     const starsContainer = document.getElementById(starsContainerID);
     resizeStarsContainerTo(starsContainerID, header);
-    const numStars = 100;  // Number of stars in the header
+    if (numStars == null) {
+        numStars = 100;
+    }
+    // const numStars = 100;  // Number of stars in the header
     var exclusion;
     if (exclusionElementID != null) {
         const logo = document.getElementById(exclusionElementID);
@@ -53,13 +56,14 @@ function generateStars(starsContainerID, overlayElementID, exclusionElementID) {
         const yPos = Math.random() * 100; // Random position in % of height
 
         // Randomize star size and animation speed
-        const size = Math.random() * 6 + 2; // Random size between 2px and 6px
+        // lower bound: 1.5vh. Upper bound: 4vh
+        const size = (Math.random() * 2.5 + 1.5)/10; // Random size between 0.15vh and 0.4vh
         const animationDuration = Math.random() * 2 + 2; // Random duration between 2s and 4s
 
         star.style.left = xPercent(xPos, exclusion);
         star.style.top = `${yPos}%`;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
+        star.style.width = `${size}vh`;
+        star.style.height = `${size}vh`;
         star.style.animationDuration = `${animationDuration}s`;
 
         starsContainer.appendChild(star);

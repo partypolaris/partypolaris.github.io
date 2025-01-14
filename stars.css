@@ -7,8 +7,8 @@
 }
 .star {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 0.1vh;
+    height: 0.1vh;
     background-color: #FFFFFF;
     border-radius: 50%;
     opacity: 0;
