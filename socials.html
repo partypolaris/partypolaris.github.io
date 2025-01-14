@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Polaris</title>
     <link rel="stylesheet" href="template-style.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="burger.css">
     <style>
       .content {
           display: flex;
@@ -26,7 +28,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="stars-container" id="stars-container"></div>
       <div id="logo-div" class="logo">
         <a href="./index.html">
@@ -85,6 +87,14 @@
       <a href="./socials.html">Social Media</a>
       <a href="./party-platform.html">Platform</a>
     </footer>
-    <script src="template.js"></script>
+    <script src="burger.js"></script>
+    <script src="stars.js"></script>
+    <script>
+        addBurger("burger-menu", "overlay", "navbar")
+        function gens() {
+            generateStars("stars-container", "header", "logo");
+        }
+        window.addEventListener('load', gens);
+    </script>
   </body>
 </html>
