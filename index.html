@@ -24,6 +24,8 @@
       </div>
     </section>
     <div id="main">
+      <div class="stars-container" id="main-stars-container" style="width: 100%;">
+      </div>
     <main>
     </main>
     <div class="footer">
@@ -35,7 +37,8 @@
     <script src="./stars.js"></script>
     <script>
       function gens() {
-          generateStars("home-header", "logo");
+          generateStars("stars-container", "home-header", "logo");
+          generateStars("main-stars-container", "main");
       }
       window.addEventListener('load', gens);
       function scroll_main() {

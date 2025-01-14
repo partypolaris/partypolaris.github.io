@@ -1,8 +1,8 @@
 var exclusionElement;
 var elementToOverlay;
 
-function resizeStarsContainerTo(element) {
-    starsCont = document.getElementById("stars-container");
+function resizeStarsContainerTo(starsContainerID, element) {
+    starsCont = document.getElementById(starsContainerID);
     height = element.clientHeight * 0.95;
     starsCont.style.height = height + "px";
 }
@@ -31,13 +31,18 @@ function xPercent(xPos, exclusion) {
 }
 
 
-function generateStars(overlayElementID, exclusionElementID) {
+function generateStars(starsContainerID, overlayElementID, exclusionElementID) {
     const header = document.getElementById(overlayElementID);
-    const starsContainer = document.getElementById('stars-container');
-    resizeStarsContainerTo(header);
+    const starsContainer = document.getElementById(starsContainerID);
+    resizeStarsContainerTo(starsContainerID, header);
     const numStars = 100;  // Number of stars in the header
-    const logo = document.getElementById(exclusionElementID);
-    const exclusion = getElementExclusion(logo);
+    var exclusion;
+    if (exclusionElementID != null) {
+        const logo = document.getElementById(exclusionElementID);
+        exclusion = getElementExclusion(logo);
+    } else {
+        exclusion = {rightEdge: 0, leftEdge: 0, range: 0};
+    }
 
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
