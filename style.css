@@ -44,12 +44,11 @@ header {
     left: 0;
     justify-content: space-around;
     background: #03153C;
-    /* height: 5vh; */
     width: 100%;
     color: white;
-    /* margin-bottom: 1%; */
     padding-bottom: 3%;
     padding-top: 3%;
+    z-index: 19;
 }
 
 .home-header > img {
@@ -68,7 +67,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    positon: absolute;
+    position: relative;
     top: 0;
     left: 0;
     min-height: 100vh;
@@ -79,6 +78,11 @@ header {
 #ursa-minor {
     width: auto;
     height: 60vh;
+}
+
+#link-map {
+    z-index: 30;
+    position: relative;
 }
 
 #link-map > a {
