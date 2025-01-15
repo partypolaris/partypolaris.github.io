@@ -93,33 +93,80 @@ header {
     font-size: 1.5vh;
     white-space: nowrap;
 }
+#link-map > div {
+    position: absolute;
+    cursor: pointer;
+    width: 7vh;
+    height: 7vh;
+    background: #00000000;
+}
 #link-map > .home {
     top: 6.5vh;
     left: 5.7vh;
+}
+#link-map > div.home {
+    top: 0vh;
+    left: 5.3vh;
 }
 #link-map > .leaders {
     top: 17vh;
     left: 0.2vh;
 }
+#link-map > div.leaders {
+    top: 11.9vh;
+    left: 2.4vh;
+    width: 5vh;
+    height: 5vh;
+}
 #link-map > .socials {
     top: 30vh;
     left: -1.5vh;
+}
+#link-map > div.socials {
+    top: 24.6vh;
+    left: -0vh;
+    width: 5.2vh;
+    height: 5.1vh;
 }
 #link-map > .platform {
     top: 43vh;
     left: 7vh;
 }
+#link-map > div.platform {
+    top: 38vh;
+    left: 6.5vh;
+    width: 5vh;
+    height: 5.2vh;
+}
 #link-map > .calendar {
     top: 49vh;
     left: -2.5vh;
+}
+#link-map > div.calendar {
+    top: 43.4vh;
+    left: 0.5vh;
+    width: 5.1vh;
+    height: 5.1vh;
 }
 #link-map > .video {
     top: 53vh;
     left: 13vh;
 }
+#link-map > div.video {
+    top: 47.9vh;
+    left: 16vh;
+    width: 5.2vh;
+    height: 5.1vh;
+}
 #link-map > .photos {
     top: 60vh;
     left: 8vh;
+}
+#link-map > div.photos {
+    top: 54.7vh;
+    left: 11.2vh;
+    width: 5.1vh;
+    height: 5.1vh;
 }
 .footer {
     position: absolute;
