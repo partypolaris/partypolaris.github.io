@@ -46,9 +46,10 @@ header {
     background: #03153C;
     width: 100%;
     color: white;
-    padding-bottom: 3%;
-    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-top: 2%;
     z-index: 19;
+    margin-bottom: 5%;
 }
 
 .home-header > img {
@@ -56,7 +57,7 @@ header {
         height: 10vh;
     }
     @media (width >= 1001px) {
-        height: 6vh;
+        height: 10vh;
     }
     width: auto;
 }
@@ -83,6 +84,7 @@ header {
 #link-map {
     z-index: 30;
     position: relative;
+    top: 5vh;
 }
 
 #link-map > a {
