@@ -6,18 +6,18 @@
 a {
     color: white;
     text-decoration: none;
-    @media (width < 1000px) {
+    @media (width <= 1000px) {
         font-size: 3vw;
     }
-    @media (width > 1001px) {
+    @media (width >= 1001px) {
         font-size: 14pt;
     }
 }
 p {
-    @media (width < 1000px) {
+    @media (width <= 1000px) {
         font-size: 3vw;
     }
-    @media (width > 1001px) {
+    @media (width >= 1001px) {
         font-size: 14pt;
     }
 }
@@ -52,10 +52,10 @@ header {
 }
 
 .home-header > img {
-    @media (width < 1000px) {
+    @media (width <= 1000px) {
         height: 10vh;
     }
-    @media (width > 1001px) {
+    @media (width >= 1001px) {
         height: 6vh;
     }
     width: auto;
