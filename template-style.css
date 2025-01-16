@@ -77,3 +77,8 @@ footer {
 .navbar {
     z-index: 21;
 }
+
+.logo {
+    position: relative;
+    z-index: 100;
+}
