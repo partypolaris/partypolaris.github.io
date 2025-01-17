@@ -43,14 +43,19 @@
           height: 70vh;
           }
           /* background: #03153C; */
+          background: #131313;
           /* border-radius: 2%; */
           /* border-color: green; */
-          /* border-style: solid; */
+          border-style: solid;
           padding-left: 1vw;
           padding-right: 1vw;
           padding-top: 1vh;
           padding-bottom: 1vh;
           z-index: 100;
+      }
+      #platform-link {
+          font-size: 4vh;
+          text-decoration: underline;
       }
     </style>
   </head>
@@ -82,12 +87,19 @@
       <div class="stars-container" id="main-stars-container"></div>
         <section class="content">
           <div class="main-content">
-            <!-- <a href="assets/platform.pdf" -->
-            <!--    style="font-size: 10vh;" -->
-            <!--    >Download the platform here!</a> -->
+            <p style="font-size: 3vh;">
+              The document below details Party Polaris’ plan to guide you to a brighter future.
+            </p>
+            <a href="https://drive.google.com/file/d/1XtvkmNzvBklhigBivJa1hvSBxCcbfIyL/view?pli=1"
+               id="platform-link">Open in browser</a>
+
             <object data="assets/platform.pdf" type="application/pdf" width="100%" height="100%"
-                    style="">
-              <a href="assets/platform.pdf">Download the platform here!</a>
+                    style="position: relative; padding-top: 2vh;">
+              <p style="font-size: 3vh;">
+                The document below details Party Polaris’ plan to guide you to a brighter future.
+              </p>
+              <a href="https://drive.google.com/file/d/1XtvkmNzvBklhigBivJa1hvSBxCcbfIyL/view?pli=1"
+                 id="platform-link">Download</a>
             </object>
           </div>
         </section>
