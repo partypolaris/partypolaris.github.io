@@ -1,3 +1,14 @@
+
+a {
+    color: white;
+    text-decoration: none;
+    @media (width <= 1000px) {
+        font-size: 3vw;
+    }
+    @media (width >= 1001px) {
+        font-size: 16pt;
+    }
+}
 * {
     margin: 0;
     padding: 0;
