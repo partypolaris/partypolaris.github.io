@@ -58,6 +58,7 @@ header {
 }
 
 .home-header > img {
+    height: 10vh;
     @media (width <= 1000px) {
         height: 10vh;
     }
