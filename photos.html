@@ -1,9 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <script>
-    function constructionRedirect() {
-        location.replace("./under-construction.html");
-    }
-  </script>
-  <body onload="constructionRedirect()"></body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Polaris Platform</title>
+    <link rel="stylesheet" href="template-style.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="burger.css">
+    <style>
+      .photos {
+        display: flex;
+        flex-direction: column;
+        @media(width >= 1000px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        }
+        align-items: flex-start;
+        position: relative;
+        z-index: 100;
+      }
+      .photos img {
+        margin: 10px;
+        border: 3px solid #000;
+        /* box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); */
+        max-width: 80vw;
+        @media(width >= 1000px) {
+            max-width: 23vw;
+        }
+      }
+      #main {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          background: black;
+          flex-direction: column;
+          padding-top: 8vh;
+      }
+      .main-content {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          flex-direction: row;
+          z-index: 100;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header id="header">
+        <div class="stars-container" id="stars-container"></div>
+        <div id="logo-div" class="logo">
+            <a href="./index.html">
+                <img id="logo" src="assets/polaris.png" alt="Polaris Logo">
+            </a>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="party-leaders.html">Party Leaders</a></li>
+                <li><a href="socials.html">Social Media</a></li>
+                <li><a href="party-platform.html">Platform</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="photos.html">Photos and Videos</a></li>
+            </ul>
+            <div class="burger" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+      <div class="stars-container" id="main-stars-container"></div>
+      <div class="main-content">
+        <!-- Put video Iframe here -->
+      </div>
+      <div class="main-content">
+        <section class="content">
+          <div class="photos">
+            <!-- Put images here -->
+            <img src="assets/photos/Leif Left Facing.jpg"/>
+            <img src="assets/photos/Cade Dramatic camera eye contact.png"/>
+            <img src="assets/photos/Carlos looking up.png"/>
+            <img src="assets/photos/Serena Right Facing.jpg"/>
+            <img src="assets/photos/Cade Front Facing.jpeg"/>
+            <img src="assets/photos/Teagan facing left.jpeg"/>
+            <img src="assets/photos/Leif Right Facing.jpg"/>
+            <img src="assets/photos/Teagan Down Facing on the Right.jpeg"/>
+            <img src="assets/photos/Serena Front Facing Half Dark.jpeg"/>
+            <img src="assets/photos/Carlos facing left.png"/>
+          </div>
+        </section>
+      </div>
+
+    <!-- <footer> -->
+    <!--     <a href="./index.html">Home</a> -->
+    <!--     <a href="./party-leaders.html">Party Leaders</a> -->
+    <!--     <a href="./socials.html">Social Media</a> -->
+    <!--     <a href="./party-platform.html">Platform</a> -->
+    <!-- </footer> -->
+
+    </main>
+
+    <div class="overlay" id="overlay">
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="party-leaders.html">Party Leaders</a></li>
+                <li><a href="socials.html">Social Media</a></li>
+                <li><a href="party-platform.html">Platform</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="photos.html">Photos and Videos</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="stars.js"></script>
+    <script src="burger.js"></script>
+    <script>
+        addBurger("burger-menu", "overlay", "navbar")
+        function gens() {
+            generateStars("stars-container", "header", "logo");
+            generateStars("main-stars-container", "main");
+        }
+        window.addEventListener('load', gens);
+    </script>
+  </body>
 </html>
