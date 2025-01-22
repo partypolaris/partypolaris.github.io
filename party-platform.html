@@ -36,11 +36,11 @@
           flex-direction: column;
           justify-content: space-around;
           position: relative;
-          width: 70vw;
-          height: 90vh;
+          /* width: 70vw; */
+          /* height: 90vh; */
           @media(width <= 1000px){
-          width: 95vw;
-          height: 70vh;
+          /* width: 95vw; */
+          /* height: 70vh; */
           }
           /* background: #03153C; */
           background: #131313;
@@ -52,10 +52,11 @@
           padding-top: 1vh;
           padding-bottom: 1vh;
           z-index: 100;
+          margin-top: 1vh;
       }
       #platform-link {
-          font-size: 4vh;
-          text-decoration: underline;
+          font-size: 3vh;
+          /* text-decoration: underline; */
       }
     </style>
   </head>
@@ -86,16 +87,15 @@
     <main id="main">
       <div class="stars-container" id="main-stars-container"></div>
         <section class="content">
+          <p style="font-size: 3vh;">
+            The document below details Party Polaris’ plan to guide you to a brighter future.
+          </p>
           <div class="main-content">
-            <p style="font-size: 3vh;">
-              The document below details Party Polaris’ plan to guide you to a brighter future.
-            </p>
             <a href="https://drive.google.com/file/d/1XtvkmNzvBklhigBivJa1hvSBxCcbfIyL/view?pli=1"
-               id="platform-link">Open in browser</a>
-
-            <object data="assets/platform.pdf" type="application/pdf" width="100%" height="100%"
-                    style="position: relative; padding-top: 2vh;">
-            </object>
+               id="platform-link">PLATFORM</a>
+            <!-- <object data="assets/platform.pdf" type="application/pdf" width="100%" height="100%" -->
+            <!--         style="position: relative; padding-top: 2vh;"> -->
+            <!-- </object> -->
           </div>
         </section>
 
